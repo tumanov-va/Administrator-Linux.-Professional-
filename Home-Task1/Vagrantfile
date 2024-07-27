@@ -1,15 +1,19 @@
 
-Vagrant.configure("2") do |config|
 
-config.vm.box = "generic/centos9s"
+Vagrant.configure(2) do |config|
 
-config.vm.provider "vmware_desktop" do |v|
+  config.vm.define "linux-lab" do |srv|
 
-  v.gui = true
-  v.verify_vmnet = true
-  v.linked_clone = false
-  v.vmx["memsize"] = "8192"
-  v.vmx["numvcpus"] = "4"
+    srv.vm.box = "generic/centos9s"
+    srv.vm.hostname = "CentOS9-VM-1"
+    srv.vm.provider "vmware_desktop" do |v|
 
-  end
+     v.gui = true
+     v.verify_vmnet = true
+     v.linked_clone = false
+     v.vmx["memsize"] = "8192"
+     v.vmx["numvcpus"] = "4"
+
+        end
+    end
 end
