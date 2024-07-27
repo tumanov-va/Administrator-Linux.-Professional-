@@ -2,6 +2,7 @@
 
 Vagrant.configure(2) do |config|
 
+  config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.define "linux-lab" do |srv|
 
     srv.vm.box = "generic/centos9s"
