@@ -39,6 +39,10 @@ make menuconfig # Custom config
 
 cp -v /boot/config-$(uname -r) .config # zcat /proc/config.gz > .config # make oldconfig  # Current configuration config 
 
+# Лекарство для ошибки Debug при сборке:
+# dnf whatprovides pahole
+# dnf install dwarves
+
 make -j 8
 make -j 8 modules
 make modules_install
