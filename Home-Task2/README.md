@@ -17,6 +17,8 @@ Sat Jul 27 10:10:25 PM UTC 2024
 
 ###### Reboot
 
+###  New Kernel by auto install
+
 [vagrant@CentOS9-VM-1 ~]$ date
 Sat Jul 27 10:18:08 PM UTC 2024
 
@@ -24,5 +26,12 @@ Sat Jul 27 10:18:08 PM UTC 2024
 6.10.2-1.el9.elrepo.x86_64
 
 
+#######
 
+###  New Kernel by manual install
 
+[vagrant@CentOS9-VM-1 ~]$ date
+Mon Jul 29 09:02:28 PM UTC 2024
+
+[vagrant@CentOS9-VM-1 ~]$ uname -r
+6.10.2
