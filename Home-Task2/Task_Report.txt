@@ -32,6 +32,7 @@ uname -r
 wget https://git.kernel.org/torvalds/t/linux-$version.tar.gz
 tar -xvf linux-$version.tar.gz -C /usr/src
 cd /usr/src/linux-$version/
+# yum grouplist - list available groups
 yum groupinstall "Development Tools"
 yum install ncurses-devel openssl-devel bc
 
